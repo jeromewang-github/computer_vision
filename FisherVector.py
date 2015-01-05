@@ -36,7 +36,7 @@ def FVFeatures(dataLearn,dataEncode,nClus,normalize=0):
     print('Clustering for visual word dictionary..')
     gmm=FV_trainGMM(dataLearn,nClus)
     print('Generating Fisher Vector features...')
-    fv_desc=FVEncoding(dataEncode, gmm.weights_, gmm.means_, gmm.covars_, normalize)
+    fv_desc=FVEncoding(dataEncode, gmm, normalize)
     return fv_desc
 
 
